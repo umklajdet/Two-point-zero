@@ -18,7 +18,6 @@ public class Calc {
         n2 = scNum.nextDouble();
         System.out.println("Select operation: +, -, *, /");
         oper = scOper.nextLine();
-        //System.out.printf("%f, %f, %s", n1, n2, oper);
         scNum.close();
         scOper.close();
         result = getResult(n1, n2, oper.trim().charAt(0));
@@ -31,7 +30,7 @@ public class Calc {
      * @param ch selected operation
      * @return result
      */
-    public double getResult(double x1, double x2, char ch){
+    public static double getResult(double x1, double x2, char ch){
         double res = 0;
         switch (ch) {
             case '+':
