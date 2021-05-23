@@ -27,11 +27,11 @@ public class Calc {
 
     /**
      * @param x1 input number 1
-     * @param x2 input number 1
+     * @param x2 input number 2
      * @param ch selected operation
      * @return result
      */
-    static double getResult(double x1, double x2, char ch){
+    public double getResult(double x1, double x2, char ch){
         double res = 0;
         switch (ch) {
             case '+':
@@ -50,5 +50,3 @@ public class Calc {
         return res;
     }
 }
-
-
