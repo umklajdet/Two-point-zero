@@ -14,8 +14,6 @@ public class RandomArray {
         for (int i = 0; i < randArray.length; i++){
             randArray[i] = Math.random() * 20 - 10;
         }
-        /*for (double d : randArray)
-            System.out.println(d);*/
         for (int i = 0; i < randArray.length; i++) {
             if (randArray[i] < 0 & randArray[i] > maxNeg){
                 maxNeg = randArray[i];
