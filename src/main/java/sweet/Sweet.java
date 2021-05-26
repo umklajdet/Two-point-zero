@@ -1,4 +1,4 @@
-package Sweet;
+package sweet;
 
 public abstract class Sweet {
     private String title;
@@ -39,6 +39,6 @@ public abstract class Sweet {
 
     @Override
     public String toString() {
-        return "title = " + title + ", weight = " + weight + ", price=" + price;
+        return "title = " + title + ", weight = " + weight + ", price = " + price;
     }
 }

@@ -1,4 +1,4 @@
-package Sweet;
+package sweet;
 
 public class Jellybean extends Sweet {
     private String color;

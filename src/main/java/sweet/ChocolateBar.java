@@ -1,4 +1,4 @@
-package Sweet;
+package sweet;
 
 public class ChocolateBar extends Sweet {
     private double cocoaPercent;
@@ -20,6 +20,6 @@ public class ChocolateBar extends Sweet {
 
     @Override
     public String toString() {
-        return "ChocolateBar {" + super.toString() + "cocoaPercent = " + cocoaPercent + "}";
+        return "ChocolateBar {" + super.toString() + ", cocoaPercent = " + cocoaPercent + "}";
     }
 }

@@ -1,4 +1,4 @@
-package Sweet;
+package sweet;
 
 public class Candy extends Sweet {
     private String flavour;
