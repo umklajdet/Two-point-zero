@@ -26,6 +26,10 @@ public class NewCalc {
     public static char getOperationSymbol(){
         Scanner sc = new Scanner (System.in);
         String str = sc.nextLine();
+        while (!(str.contains("+") ^ str.contains("-") ^ str.contains("*") ^ str.contains("/"))){
+            System.out.println("Can not recognize the operation. Try again");
+            str = sc.nextLine();
+        }
         return str.trim().charAt(0);
     }
 
