@@ -6,11 +6,11 @@ public class NewCalc {
     public static void main(String[] args) {
         double x1, x2;
         System.out.println("Enter first number:");
-        x1 = Operation.getNumberForOperation();
+        x1 = DataChecker.getNumberForOperation();
         System.out.println("Enter second number:");
-        x2 = Operation.getNumberForOperation();
+        x2 = DataChecker.getNumberForOperation();
         System.out.println("Select operation: +, -, *, /");
-        char operationSymbol = Operation.getOperationSymbol();
+        char operationSymbol = DataChecker.getOperationSymbol();
         getOperationResult(x1, x2, operationSymbol);
     }
 
