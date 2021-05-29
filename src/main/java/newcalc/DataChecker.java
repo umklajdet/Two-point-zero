@@ -21,5 +21,4 @@ public class DataChecker {
         }
         return str.trim().charAt(0);
     }
-
 }

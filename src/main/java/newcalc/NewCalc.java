@@ -1,7 +1,5 @@
 package newcalc;
 
-import java.util.Scanner;
-
 public class NewCalc {
     public static void main(String[] args) {
         double x1, x2;
@@ -15,22 +13,23 @@ public class NewCalc {
     }
 
     public static void getOperationResult(double x1, double x2, char operationSymbol){
+        Operation operation;
         switch (operationSymbol) {
             case '+':
-                Addition operation1 = new Addition(x1, x2);
-                System.out.println(operation1.toString());
+                operation = new Addition(x1, x2);
+                System.out.println(operation.toString());
                 break;
             case '-':
-                Subtraction operation2 = new Subtraction(x1, x2);
-                System.out.println(operation2.toString());
+                operation = new Subtraction(x1, x2);
+                System.out.println(operation.toString());
                 break;
             case '*':
-                Multiplication operation3 = new Multiplication(x1, x2);
-                System.out.println(operation3.toString());
+                operation = new Multiplication(x1, x2);
+                System.out.println(operation.toString());
                 break;
             case '/':
-                Division operation4 = new Division(x1, x2);
-                System.out.println(operation4.toString());
+                operation = new Division(x1, x2);
+                System.out.println(operation.toString());
                 break;
             default:
                 System.out.println("Can not recognize the operation");

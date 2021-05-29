@@ -23,5 +23,4 @@ public abstract class Operation {
     public double getX2() {
         return x2;
     }
-
 }
