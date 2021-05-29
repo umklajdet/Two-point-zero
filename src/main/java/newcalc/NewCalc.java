@@ -6,31 +6,12 @@ public class NewCalc {
     public static void main(String[] args) {
         double x1, x2;
         System.out.println("Enter first number:");
-        x1 = getNumberForOperation();
+        x1 = Operation.getNumberForOperation();
         System.out.println("Enter second number:");
-        x2 = getNumberForOperation();
+        x2 = Operation.getNumberForOperation();
         System.out.println("Select operation: +, -, *, /");
-        char operationSymbol = getOperationSymbol();
+        char operationSymbol = Operation.getOperationSymbol();
         getOperationResult(x1, x2, operationSymbol);
-    }
-
-    public static double getNumberForOperation(){
-        Scanner sc = new Scanner (System.in);
-        while (!sc.hasNextDouble()){
-            System.out.println("Not a number. Try again");
-            sc.nextLine();
-        }
-        return sc.nextDouble();
-    }
-
-    public static char getOperationSymbol(){
-        Scanner sc = new Scanner (System.in);
-        String str = sc.nextLine();
-        while (!(str.contains("+") ^ str.contains("-") ^ str.contains("*") ^ str.contains("/"))){
-            System.out.println("Can not recognize the operation. Try again");
-            str = sc.nextLine();
-        }
-        return str.trim().charAt(0);
     }
 
     public static void getOperationResult(double x1, double x2, char operationSymbol){
