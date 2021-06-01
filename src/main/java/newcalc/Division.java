@@ -6,12 +6,21 @@ public class Division extends Operation {
         super(x1, x2);
     }
 
-    public double getResult(){
-        return super.getX1() / super.getX2();
+    public double getResult() throws DivisionToNullException{
+        if (super.getX2() != 0)
+            return super.getX1() / super.getX2();
+        else
+            throw new DivisionToNullException();
     }
 
     @Override
     public String toString() {
-        return "Division {Result = " + String.format("%.3f",getResult()) + "}";
+        try {
+            return "Division {Result = " + String.format("%.3f",getResult()) + "}";
+        } catch (DivisionToNullException e) {
+            System.out.println("You can not divide to null");
+            e.printStackTrace();
+            return "";
+        }
     }
 }
