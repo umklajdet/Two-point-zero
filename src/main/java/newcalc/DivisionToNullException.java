@@ -1,7 +1,8 @@
 package newcalc;
 
-public class DivisionToNullException extends Exception {
+public class DivisionToNullException extends ArithmeticException {
     public DivisionToNullException() {
+
     }
 
     @Override
