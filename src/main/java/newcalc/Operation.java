@@ -23,4 +23,6 @@ public abstract class Operation {
     public double getX2() {
         return x2;
     }
+
+    public abstract double getResult() throws DivisionToNullException;
 }
