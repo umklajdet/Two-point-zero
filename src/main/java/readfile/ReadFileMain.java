@@ -33,6 +33,10 @@ public class ReadFileMain {
             for (int j = i+1; j < sortedWords.size(); j++){
                 if (sortedWords.get(i).getWordValue().equals(sortedWords.get(j).getWordValue())) {
                     counter++;
+                    if (j == words.size()-1) {
+                        sortedWords.get(i).setWordRepeat(counter);
+                        i = words.size();
+                    }
                 }
                 else {
                     sortedWords.get(i).setWordRepeat(counter);
@@ -55,11 +59,14 @@ public class ReadFileMain {
         }
 
         int max = 1;
-        // поиск максимального количества повторений
+        // вывод статистики по каждому слову
+        System.out.println("----------------Words repetition statistics----------------");
         for (Word word : sortedWords) {
+            System.out.printf("%s - %d%n", word.getWordValue(), word.getWordRepeat());
             if (word.getWordRepeat() > max)
                 max = word.getWordRepeat();
         }
+        // вывод слов с максимальным кол-вом повторений
         System.out.printf("Most repeated (%d times):%n", max);
         for (Word word : sortedWords)
             if(word.getWordRepeat() == max)
